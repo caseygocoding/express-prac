@@ -15,10 +15,10 @@ nunjucks.configure('views', { noCache: true }); // where to find the views, cach
 
 app.use(bodyParser.urlencoded({ extended: true }))
 // for HTML form submits
-app.use(bodyParser.json()) // would be for AJAX requests
 
+//req.body
+app.use(bodyParser.json()) // would be for AJAX requests
 app.use(morgan('dev'));
-app.use(router)
 
 
 app.use(function(err, req, res, next) {
